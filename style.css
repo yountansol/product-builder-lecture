@@ -1,19 +1,63 @@
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --container-bg-color: white;
+    --button-bg-color: #4CAF50;
+    --button-hover-bg-color: #45a049;
+    --number-bg-color: #6a0dad; /* A default color for numbers */
+}
+
+body.dark-mode {
+    --background-color: #222;
+    --text-color: #eee;
+    --container-bg-color: #333;
+    --button-bg-color: #6a0dad;
+    --button-hover-bg-color: #5a0cae;
+    --number-bg-color: #4CAF50; /* A different color for numbers in dark mode */
+}
 
 body {
     font-family: sans-serif;
     display: flex;
+    flex-direction: column; /* Changed to column to accommodate theme switch */
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0; /* Remove default body margin */
 }
 
 .container {
     text-align: center;
-    background-color: white;
+    background-color: var(--container-bg-color);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    position: relative; /* For positioning theme switch */
+}
+
+.theme-switch {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#theme-toggle {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--button-hover-bg-color);
 }
 
 h1 {
@@ -37,6 +81,8 @@ h1 {
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
+    background-color: var(--number-bg-color);
+    transition: background-color 0.3s;
 }
 
 #generate-btn {
@@ -44,12 +90,12 @@ h1 {
     font-size: 1rem;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
+    background-color: var(--button-bg-color);
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 #generate-btn:hover {
-    background-color: #45a049;
+    background-color: var(--button-hover-bg-color);
 }
