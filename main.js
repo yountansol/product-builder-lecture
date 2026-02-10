@@ -1,8 +1,13 @@
 
-const generateBtn = document.getElementById('generate-btn');
-const numberElements = document.querySelectorAll('.number');
+const recommendBtn = document.getElementById('recommend-btn');
+const menuItemElement = document.querySelector('.menu-item');
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
+
+const dinnerMenus = [
+    "치킨", "피자", "삼겹살", "초밥", "파스타", "족발", "보쌈", "짜장면", "짬뽕", "떡볶이",
+    "김치찌개", "된장찌개", "부대찌개", "곱창", "막창", "닭발", "햄버거", "샌드위치", "샐러드", "라면"
+];
 
 // Theme switching functionality
 function setTheme(theme) {
@@ -35,40 +40,17 @@ themeToggle.addEventListener('click', () => {
 // Load theme on page load
 loadTheme();
 
-// Lotto number generation functionality
-function generateLottoNumbers() {
-    const numbers = new Set();
-    while (numbers.size < 6) {
-        const randomNumber = Math.floor(Math.random() * 45) + 1;
-        numbers.add(randomNumber);
-    }
-    return Array.from(numbers).sort((a, b) => a - b);
+// Dinner menu recommendation functionality
+function recommendDinner() {
+    const randomIndex = Math.floor(Math.random() * dinnerMenus.length);
+    return dinnerMenus[randomIndex];
 }
 
-function displayNumbers(numbers) {
-    numberElements.forEach((element, index) => {
-        element.textContent = numbers[index];
-        // The background color for numbers will now be handled by CSS variables based on theme
-        // element.style.backgroundColor = getNumberColor(numbers[index]); // Removed this line
-    });
+function displayMenu(menu) {
+    menuItemElement.textContent = menu;
 }
 
-// Keeping getNumberColor but not using it for background as CSS handles it now
-function getNumberColor(number) {
-    if (number <= 10) {
-        return '#f9e45b'; // Yellow
-    } else if (number <= 20) {
-        return '#5b8def'; // Blue
-    } else if (number <= 30) {
-        return '#ef5b5b'; // Red
-    } else if (number <= 40) {
-        return '#808080'; // Gray
-    } else {
-        return '#5bef5b'; // Green
-    }
-}
-
-generateBtn.addEventListener('click', () => {
-    const numbers = generateLottoNumbers();
-    displayNumbers(numbers);
+recommendBtn.addEventListener('click', () => {
+    const recommendedMenu = recommendDinner();
+    displayMenu(recommendedMenu);
 });

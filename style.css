@@ -64,17 +64,18 @@ h1 {
     margin-bottom: 1rem;
 }
 
-.lotto-numbers {
+.menu-display {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-bottom: 2rem;
 }
 
-.number {
-    width: 50px;
+.menu-item {
+    width: auto;
+    padding: 20px 30px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,7 +86,7 @@ h1 {
     transition: background-color 0.3s;
 }
 
-#generate-btn {
+#recommend-btn {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     border: none;
@@ -96,6 +97,6 @@ h1 {
     transition: background-color 0.3s;
 }
 
-#generate-btn:hover {
+#recommend-btn:hover {
     background-color: var(--button-hover-bg-color);
 }
