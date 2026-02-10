@@ -6,26 +6,26 @@ const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
 const dinnerMenus = [
-    { name: "치킨", imageUrl: "https://picsum.photos/seed/1/200" },
-    { name: "피자", imageUrl: "https://picsum.photos/seed/2/200" },
-    { name: "삼겹살", imageUrl: "https://picsum.photos/seed/3/200" },
-    { name: "초밥", imageUrl: "https://picsum.photos/seed/4/200" },
-    { name: "파스타", imageUrl: "https://picsum.photos/seed/5/200" },
-    { name: "족발", imageUrl: "https://picsum.photos/seed/6/200" },
-    { name: "보쌈", imageUrl: "https://picsum.photos/seed/7/200" },
-    { name: "짜장면", imageUrl: "https://picsum.photos/seed/8/200" },
-    { name: "짬뽕", imageUrl: "https://picsum.photos/seed/9/200" },
-    { name: "떡볶이", imageUrl: "https://picsum.photos/seed/10/200" },
-    { name: "김치찌개", imageUrl: "https://picsum.photos/seed/11/200" },
-    { name: "된장찌개", imageUrl: "https://picsum.photos/seed/12/200" },
-    { name: "부대찌개", imageUrl: "https://picsum.photos/seed/13/200" },
-    { name: "곱창", imageUrl: "https://picsum.photos/seed/14/200" },
-    { name: "막창", imageUrl: "https://picsum.photos/seed/15/200" },
-    { name: "닭발", imageUrl: "https://picsum.photos/seed/16/200" },
-    { name: "햄버거", imageUrl: "https://picsum.photos/seed/17/200" },
-    { name: "샌드위치", imageUrl: "https://picsum.photos/seed/18/200" },
-    { name: "샐러드", imageUrl: "https://picsum.photos/seed/19/200" },
-    { name: "라면", imageUrl: "https://picsum.photos/seed/20/200" }
+    { name: "치킨", imageUrl: "https://placehold.co/200x200?text=%EC%B9%98%ED%82%A8" },
+    { name: "피자", imageUrl: "https://placehold.co/200x200?text=%ED%94%BC%EC%9E%90" },
+    { name: "삼겹살", imageUrl: "https://placehold.co/200x200?text=%EC%82%BC%EA%B2%B9%EC%82%B4" },
+    { name: "초밥", imageUrl: "https://placehold.co/200x200?text=%EC%B4%88%EB%B0%A5" },
+    { name: "파스타", imageUrl: "https://placehold.co/200x200?text=%ED%8C%8C%EC%8A%A4%ED%83%80" },
+    { name: "족발", imageUrl: "https://placehold.co/200x200?text=%EC%A1%B1%EB%B0%9C" },
+    { name: "보쌈", imageUrl: "https://placehold.co/200x200?text=%EB%B3%B4%EC%8C%88" },
+    { name: "짜장면", imageUrl: "https://placehold.co/200x200?text=%EC%A7%9C%EC%9E%A5%EB%A9%B4" },
+    { name: "짬뽕", imageUrl: "https://placehold.co/200x200?text=%EC%A7%AC%EB%BD%95" },
+    { name: "떡볶이", imageUrl: "https://placehold.co/200x200?text=%EB%96%A1%EB%B3%B6%EC%9D%B4" },
+    { name: "김치찌개", imageUrl: "https://placehold.co/200x200?text=%EA%B9%80%EC%B9%98%EC%B0%8C%EA%B0%9C" },
+    { name: "된장찌개", imageUrl: "https://placehold.co/200x200?text=%EB%90%9C%EC%9E%A5%EC%B0%8C%EA%B0%9C" },
+    { name: "부대찌개", imageUrl: "https://placehold.co/200x200?text=%EB%B6%80%EB%8C%80%EC%B0%8C%EA%B0%9C" },
+    { name: "곱창", imageUrl: "https://placehold.co/200x200?text=%EA%B3%B1%EC%B0%BD" },
+    { name: "막창", imageUrl: "https://placehold.co/200x200?text=%EB%A7%89%EC%B0%BD" },
+    { name: "닭발", imageUrl: "https://placehold.co/200x200?text=%EB%8B%AD%EB%B0%9C" },
+    { name: "햄버거", imageUrl: "https://placehold.co/200x200?text=%ED%96%84%EB%B2%84%EA%B1%B0" },
+    { name: "샌드위치", imageUrl: "https://placehold.co/200x200?text=%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98" },
+    { name: "샐러드", imageUrl: "https://placehold.co/200x200?text=%EC%83%90%EB%9F%AC%EB%93%9C" },
+    { name: "라면", imageUrl: "https://placehold.co/200x200?text=%EB%9D%BC%EB%A9%B4" }
 ];
 
 // Theme switching functionality
