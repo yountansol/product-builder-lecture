@@ -1,12 +1,31 @@
 
 const recommendBtn = document.getElementById('recommend-btn');
 const menuItemElement = document.querySelector('.menu-item');
+const menuImageElement = document.getElementById('menu-image');
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
 const dinnerMenus = [
-    "치킨", "피자", "삼겹살", "초밥", "파스타", "족발", "보쌈", "짜장면", "짬뽕", "떡볶이",
-    "김치찌개", "된장찌개", "부대찌개", "곱창", "막창", "닭발", "햄버거", "샌드위치", "샐러드", "라면"
+    { name: "치킨", imageUrl: "https://picsum.photos/seed/1/200" },
+    { name: "피자", imageUrl: "https://picsum.photos/seed/2/200" },
+    { name: "삼겹살", imageUrl: "https://picsum.photos/seed/3/200" },
+    { name: "초밥", imageUrl: "https://picsum.photos/seed/4/200" },
+    { name: "파스타", imageUrl: "https://picsum.photos/seed/5/200" },
+    { name: "족발", imageUrl: "https://picsum.photos/seed/6/200" },
+    { name: "보쌈", imageUrl: "https://picsum.photos/seed/7/200" },
+    { name: "짜장면", imageUrl: "https://picsum.photos/seed/8/200" },
+    { name: "짬뽕", imageUrl: "https://picsum.photos/seed/9/200" },
+    { name: "떡볶이", imageUrl: "https://picsum.photos/seed/10/200" },
+    { name: "김치찌개", imageUrl: "https://picsum.photos/seed/11/200" },
+    { name: "된장찌개", imageUrl: "https://picsum.photos/seed/12/200" },
+    { name: "부대찌개", imageUrl: "https://picsum.photos/seed/13/200" },
+    { name: "곱창", imageUrl: "https://picsum.photos/seed/14/200" },
+    { name: "막창", imageUrl: "https://picsum.photos/seed/15/200" },
+    { name: "닭발", imageUrl: "https://picsum.photos/seed/16/200" },
+    { name: "햄버거", imageUrl: "https://picsum.photos/seed/17/200" },
+    { name: "샌드위치", imageUrl: "https://picsum.photos/seed/18/200" },
+    { name: "샐러드", imageUrl: "https://picsum.photos/seed/19/200" },
+    { name: "라면", imageUrl: "https://picsum.photos/seed/20/200" }
 ];
 
 // Theme switching functionality
@@ -47,7 +66,9 @@ function recommendDinner() {
 }
 
 function displayMenu(menu) {
-    menuItemElement.textContent = menu;
+    menuItemElement.textContent = menu.name;
+    menuImageElement.src = menu.imageUrl;
+    menuImageElement.alt = menu.name;
 }
 
 recommendBtn.addEventListener('click', () => {
