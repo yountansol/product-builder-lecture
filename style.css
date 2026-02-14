@@ -37,6 +37,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, box-shadow 0.3s;
     position: relative; /* For positioning theme switch */
+    margin-bottom: 2rem; /* Add margin to separate from the form */
 }
 
 .theme-switch {
@@ -107,5 +108,74 @@ h1 {
 }
 
 #recommend-btn:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+/* Partnership Form Styling */
+.partnership-form-container {
+    background-color: var(--container-bg-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 500px; /* Limit form width */
+    margin-top: 2rem;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.partnership-form-container h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.partnership-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.partnership-form label {
+    text-align: left;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.partnership-form input[type="text"],
+.partnership-form input[type="email"],
+.partnership-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in width */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.partnership-form input[type="text"]:focus,
+.partnership-form input[type="email"]:focus,
+.partnership-form textarea:focus {
+    border-color: var(--button-bg-color);
+    outline: none;
+}
+
+.partnership-form button[type="submit"] {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-start; /* Align button to the left */
+}
+
+.partnership-form button[type="submit"]:hover {
     background-color: var(--button-hover-bg-color);
 }
